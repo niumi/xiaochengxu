@@ -1,0 +1,8 @@
+<template name='mukuai'>
+  <view class='box'>
+    <view class='content'>
+      <image wx:for="{{temp.pics}}" wx:key='index' src="{{item}}"></image>
+    </view>
+    <text>{{temp.name}}</text>
+  </view>
+</template>

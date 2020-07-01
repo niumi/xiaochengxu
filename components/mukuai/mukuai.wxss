@@ -1,0 +1,15 @@
+.content{
+  display: flex;
+}
+.content>image{
+  flex:1;
+  height: 230rpx;
+}
+.box{
+  text-align: center;
+  margin:20rpx 0;
+}
+.box text{
+  margin:20rpx 0;
+  font-size: 32rpx;
+}

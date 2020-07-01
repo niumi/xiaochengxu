@@ -1,0 +1,72 @@
+/* pages/musicList/musicList.wxss */
+page{
+  padding-top:80rpx;
+}
+.playApause{
+  display: flex;
+  padding:10rpx 0;
+  background: #f1f1f1;
+  width:100%;
+  position: fixed;
+  z-index: 999;
+  top:0;
+  left:0;
+}
+.playApause image{
+  width:50rpx;
+  height: 50rpx;
+  vertical-align: middle;
+}
+.playApause .tubiao{
+  flex:1;
+  text-align: right;
+}
+.playApause .musicTitle{
+  flex:6;
+}
+.playApause .musicbtn{
+  flex:2;
+}
+.musicjj{
+  display: flex;
+  align-items: center;
+}
+.musicjj .jjtp{
+  flex:1;
+  margin-left:10rpx;
+}
+.musicjj .jjtp image{
+  width: 230rpx;
+  height: 200rpx;
+  
+}
+.musicjj .titlejj{
+  flex:2;
+  font-size:32rpx;
+}
+
+.onemusic{
+  display: flex;
+  font-size:30rpx;
+  align-items:center;
+  padding:10rpx 0;
+}
+.onemusic:nth-child(odd){
+  background: #f1f1f1;
+}
+.onemusic .bh{
+  flex:1;
+  text-align: center;
+}
+.onemusic .musicname{
+  flex:7;
+}
+.onemusic .musicpic{
+  flex:2;
+}
+.onemusic .musicpic image{
+  width:104rpx;
+  height: 104rpx;
+  border-radius: 50%;
+  vertical-align: middle;
+}

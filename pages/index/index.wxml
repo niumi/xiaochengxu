@@ -1,0 +1,27 @@
+<!--index.wxml-->
+<!-- 引入模板 -->
+<import src="../../components/mukuai/mukuai.wxml" />
+<!-- 使用事件委托实现页面跳转 -->
+<view class="container">
+  <view class="up">
+    <view data-mtype="{{jingdian.type}}" bindtap='toList'>
+      <image src="{{jingdian.pics[0]}}"></image>
+      <text>{{jingdian.name}}</text>
+    </view>
+    <view data-mtype="{{rege.type}}" bindtap='toList'>
+      <image src='{{rege.pics[0]}}'></image>
+      <text>{{rege.name}}</text>
+    </view>
+  </view>
+  <view class='down'>
+    <view data-mtype="{{xinge.type}}" bindtap='toList'>
+      <template is="mukuai" data="{{temp:xinge}}" />
+    </view>
+    <view data-mtype="{{yaogun.type}}" bindtap='toList'>
+      <template is='mukuai' data="{{temp:yaogun}}" />
+    </view>
+    <view data-mtype="{{jinqu.type}}" bindtap='toList'>
+      <template is='mukuai' data="{{temp:jinqu}}" />
+    </view>
+  </view>
+</view>

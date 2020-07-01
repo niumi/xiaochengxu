@@ -1,0 +1,41 @@
+<!--pages/musicList/musicList.wxml-->
+<!-- 控制音乐播放与暂停 -->
+<view class='playApause'>
+  <view class='tubiao'>
+    <image src='../../images/musicplay.png'></image>
+  </view>
+  <view class='musicTitle'>
+    {{musicname}}
+  </view>
+  <view class='musicbtn'>
+    <image bindtap='prevsong' src='../../images/prev.png'></image>
+  <!-- 绑定点击事件，如果是播放状态，要暂停；如果是暂停状态，要播放 -->
+    <image bindtap='controlPlay' src='{{flag?"../../images/play.png":"../../images/puase.png"}}'></image>
+
+    <image bindtap='nextsong' src='../../images/next.png'></image>
+  </view>
+</view>
+<!-- 标题加简介 -->
+<view class='musicjj'>
+  <view class='jjtp'>
+    <image src="{{pic}}"></image>
+  </view>
+  <view class='titlejj'>
+    <view>{{name}}</view>
+    <view>{{comment}}</view>
+  </view>
+</view>
+<button bindtap='playAll'>播放全部</button>
+<view class='musiclist'>
+  <view data-mid="{{item.song_id}}" data-mindex="{{index}}" bindtap='playmusic' class='onemusic' wx:for="{{songinfo}}" wx:key="index">
+    <view class='bh'>{{index+1}}</view>
+    <view class='musicname'>
+      <view>{{item.title}}</view>
+      <view>{{item.author}}</view>
+    </view>
+    <view class="musicpic">
+      <image src="{{item.pic_big}}"></image>
+    </view>
+  </view>
+
+</view>
